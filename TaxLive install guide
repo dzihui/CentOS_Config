@@ -1,0 +1,26 @@
+/* Install package */
+	# yum install -y perl-Digest-MD5 perl-Tk
+
+	/* Mount ISO file */
+	# mount -o loop texlive2016.iso /mnt/
+
+	/* Start installation */
+	# cd /mnt/
+	# ./install-tl
+
+	/* Modify file ~/.bashrc */
+	/* Add the following text at the end of ~/.bashrc */
+	# TexLive 2016
+	export MANPATH=${MANPATH}:/usr/local/texlive/2016/texmf-dist/doc/man
+	export INFOPATH=${INFOPATH}:/usr/local/texlive/2016/texmf-dist/doc/info
+	export PATH=${PATH}:/usr/local/texlive/2016/bin/x86_64-linux
+	
+	/* Umount ISO file */
+	# cd
+	# umount /mnt/
+
+	/* Update TeXLive */
+	# reboot
+		...
+	# tlmgr update --self
+	# tlmgr update --all

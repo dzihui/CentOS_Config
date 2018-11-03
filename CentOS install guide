@@ -48,6 +48,7 @@
 	# yum install -y terminator
 	# yum install -y shutter
 	# yum install -y minicom
+	# yum install -y cloc
 	
 	/* Install flash plugin */
 	# rpm -ivh http://linuxdownload.adobe.com/adobe-release/adobe-release-x86_64-1.0-1.noarch.rpm
